@@ -1,0 +1,47 @@
+table td:first-child{
+  width: 120px;
+}
+
+.service-table{
+  .card-img{
+    border-radius: 0;
+  }
+  .card-img-overlay{
+    .price{
+      display: table;
+      margin-left: auto;
+      margin-right:auto;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #2ED87B;
+      color: #fff;
+    }
+  }
+  .card-block{
+    padding: 0;
+  }
+  table{
+    th,td{
+      border: none;
+      text-align: center;
+    }
+    tr{
+      th{
+        background: #2ED87B;
+        color: #fff;
+      }
+    }
+    tbody{
+      tr{
+        td{
+          border-bottom: 1px solid #f1f1f1;
+        }
+        &:last-child{
+          td{
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,287 @@
+<div class="page-content">
+  <!-- Landing Section -->
+  <div class="landing-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center"> Hi! Welcome</h2>
+          <h1 class="text-center text-uppercase">
+            <span class="first">Sibin</span>
+            <span class="last">Xavier</span>
+          </h1>
+          <h3 class="text-center">
+            I'm a Fullstack Frontend Developer
+          </h3>
+          <section class="text-center">
+            <a href="#get-in-touch"
+               class="btn btn-lg btn-success btn-round
+               text-uppercase get-in-touch">
+              Hire me for Work
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Landing Section -->
+  <!-- Profile Information -->
+  <div class="profile-information section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 offset-0 offset-sm-0 offset-md-0 ">
+          <div class="card" id="profile-info-card">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                  <img src="/assets/images/profile-img.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                  <h3 class="text-uppercase border-title green">About Me</h3>
+                  <section class="content" innerHTML="{{profileInfo.bio}}"></section>
+                  <table class="table small-table no-border">
+                    <tbody>
+                      <tr *ngFor="let item of profileInfo.data">
+                        <td [style]>
+                          <b>{{item.label}}</b>
+                        </td>
+                        <td>
+                          <span *ngIf="!item.link && !item.html">{{item.value}}</span>
+                          <a href="{{item.href}}" *ngIf="item.link" target="_blank">{{item.value}}</a>
+                          <div *ngIf="item.html" innerHTML="{{item.value }}"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="download-more">
+                    <a href="" class="btn btn-success btn-round">Download CV</a>
+                    <a routerLink="recent-work" class="btn btn-outline-success btn-round">Check My Works</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Profile Information -->
+  <!-- My Skills section -->
+  <div class="skill-section section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-10 offset-1">
+          <h4 class="text-center text-uppercase">My Skills</h4>
+          <article class="text-center">
+            I learned differnt skills from varioud company, also i am very keen to learn new Technologies. Usually i download
+            Tutorials from torrent or subscribe Lynda.com and learn new stuff. I also use YouTube and watch Tutorials.
+            Now a days i check Tutorials websites, API and source code to learn new thing and explore. Below are
+            some of my Skills... I can also learn new things if client require...
+          </article>
+          <div class="skill-set row">
+            <app-progress-bar *ngFor="let skill of skills" [skill]="skill" class="col-12 col-sm-6 "></app-progress-bar>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End My Skills section -->
+  <!-- Let's work together -->
+  <div class="lets-work section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-uppercase text-center">Let's work together</h4>
+          <article class="text-center">
+            I am very flexible, available almost 12-16 Hr per day. I can work at morning or night depend upon clients requirements.
+            My charges are also different and it vary from 5$ to 20$ per hour.
+          </article>
+          <p class="text-center">
+            <a href="" class="btn btn-success btn-round">Get Quotes</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Let's work together -->
+  <!-- My Portfolio -->
+  <div class="my-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-center text-uppercase">My Portfolio</h4>
+          <article class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet atque consectetur consequuntur, culpa cumque debitis distinctio facere fugiat inventore iste maxime minima nihil omnis porro qui sint temporibus vero.</article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End My Portfolio -->
+  <!-- Experience -->
+  <app-experience></app-experience>
+  <!-- End Experience -->
+  <!-- Education -->
+  <app-education></app-education>
+  <!-- End Education -->
+  <!-- My Services -->
+  <div class="home-service section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-center text-uppercase">Services</h4>
+          <article class="text-center">
+            I offer different services, PSD to HTML/ WordPress conversion. Full Frontend Development, Full Stack development
+            with Laravel, Ruby On Rails, MEAN and WordPress.
+          </article>
+          <div class="service-box">
+            <div class="row">
+              <div class="col-12">
+                <div class="card-deck service-table">
+                  <div class="card" *ngFor="let service of services">
+                    <div class="card-image-block">
+                      <img src="http://lorempixel.com/600/360/" alt="" class="card-img img-fluid">
+                      <div class="card-img-overlay">
+                        <h5 class="price">
+                          {{ service.price }}
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th>
+                            <h4 class="text-uppercase">
+                              {{ service.title }}
+                            </h4>
+                          </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let child of service.children">
+                          <td>
+                            {{ child }}
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End My Services -->
+  <!-- Latest blog -->
+  <app-blog></app-blog>
+  <!-- End Latest blog -->
+  <!-- Get in Touch -->
+  <div class="get-in-touch-section section" id="get-in-touch">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-uppercase text-center">Get in touch</h4>
+          <article class="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consectetur corporis culpa deserunt expedita hic id labore, magni nisi quae quam quas, quod repellat sed sequi sint vel velit.
+          </article>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+              <div class="card light-blue contact-form">
+                <div class="card-block">
+                  <h5 class="text-bold">Contact me!!!</h5>
+                  <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis dolor dolorem eius eos est explicabo illo magnam magni natus neque non, quos recusandae, rerum similique ut veritatis vero voluptas?
+                  </p>
+                  <form (ngSubmit)="contactSubmit()">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="contact-name" placeholder="Name" name="name">
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="contact-email" placeholder="Email" name="email">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="subject" id="contact-subject" placeholder="Subject" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <textarea name="message" id="contact-message" class="form-control"
+                                cols="30" rows="4" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-block btn-success">Send</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+              <div class="card light-blue contact-form address-box">
+                <div class="card-block">
+                  <h5 class="text-bold">Contact me!!!</h5>
+                  <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis dolor dolorem eius eos est explicabo illo magnam magni natus neque non, quos recusandae, rerum similique ut veritatis vero voluptas?
+                  </p>
+                  <div class="media mb-4">
+                    <div class="d-flex mr-3">
+                      <span class="text-image">
+                        <i>A</i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <strong>Address</strong>
+                      <p>
+                        Thottanakara House
+                      </p>
+                      <p>
+                        Cheranalloor P.O, Koovappady
+                      </p>
+                      <p>
+                        Ernakulam, PIN 683544
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media mb-4">
+                    <div class="d-flex mr-3">
+                      <span class="text-image">
+                        <i>E</i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <strong>Email</strong>
+                      <p>
+                        sibinx7@gmail.com, sibinx7@outlook.com
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="d-flex mr-3">
+                      <span class="text-image">
+                        <i>P</i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <strong>Phone</strong>
+                      <p>
+                        +91-89436481989, +91-8281604078,
+                        +91-8589961286
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Get in Touch -->
+</div>

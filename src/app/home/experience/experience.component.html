@@ -1,0 +1,30 @@
+<div class="work-experience section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="text-center text-uppercase">Work Experience</h4>
+        <article class="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cum dolorum laboriosam libero molestiae
+          odio placeat quidem sed sit temporibus. Alias commodi dolor est ipsam modi molestias nemo quas sequi.
+        </article>
+        <div class="work-experience-box">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6" *ngFor="let experience of experiences">
+              <div class="media">
+                <app-image [src]="experience.company.image" [title]="experience.company.name"
+                           [alt]="experience.company.name" [dimension]="'100,100'" class="mr-3 d-flex"></app-image>
+                <div class="media-body">
+                  <label class="badge badge-success">{{experience | yearSpan}}</label>
+                  <h5 class="mt-0"><a href="{{experience.company.url}}" target="_blank">{{experience.company.name}}</a></h5>
+                  <p>
+                    {{ experience.note }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

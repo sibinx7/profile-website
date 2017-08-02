@@ -1,0 +1,35 @@
+<div class="education-experience section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="text-center text-uppercase">Education</h4>
+        <article class="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dicta dolorum eius eum eveniet explicabo fugit, inventore obcaecati omnis optio quisquam quo suscipit, temporibus ullam vel voluptas! Dicta, dignissimos.
+        </article>
+        <div class="education-box-outer">
+          <div class="education-box clearfix">
+            <div class="education-each" *ngFor="let education of educations">
+              <div class="card">
+                <div class="card-block">
+                  <h5>{{education.college.name}}</h5>
+                  <p>
+                    {{education.note}}
+                  </p>
+                </div>
+              </div>
+              <div class="dot-A">
+
+              </div>
+              <div class="dot-B">
+
+              </div>
+              <div class="year">
+                {{ education | yearSpan }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

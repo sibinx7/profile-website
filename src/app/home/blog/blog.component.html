@@ -1,0 +1,43 @@
+<div class="blog-wrapper section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center text-uppercase">Our Latest News</h4>
+                <article class="text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci architecto consequatur deserunt, dolor, facilis iure labore laudantium minima nam nemo nulla quam quibusdam repellendus saepe sapiente totam. Expedita, sit?
+                </article>
+                <div class="blog-posts row">
+                    <div class="post col-12 col-sm-12 col-md-4" *ngFor="let post of posts">
+                        <div class="card">
+                            <div class="card-image" *ngIf="post.image">
+                                <img src=" {{post.image}} " alt="{{post.title}} " class="img-fluid ">
+                            </div>
+                            <div class="card-block ">
+                                <h5 class="card-title ">
+                                    <a href="{{post.url}} " *ngIf="post.url">
+                    {{post.title}}
+									</a>
+                                    <a [routerLink]="['/posts', post.id]">
+																			{{post.title}}
+																		</a>
+                                </h5>
+                                <h6>
+                                    {{post.published_at}}
+                                </h6>
+                                <section>
+                                    {{post.content || post.body }}
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center more ">
+                    <a href="http://blog.7chip.com " target="_blank " class="btn btn-success btn-round text-capitalize text-bold ">
+            Visit Our Blog
+					</a>
+                    <a routerLink='/posts'>Internal Blog Posts</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.text-image{
+  display: table;
+  background: #2ed87b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 64px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    border: 1px dashed #fff;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
+    line-height: 0;
+  }
+  .text-img-center{
+    display: table-cell;
+    vertical-align: middle;
+
+  }
+}

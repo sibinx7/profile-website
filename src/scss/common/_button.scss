@@ -1,0 +1,36 @@
+.btn-round{
+  border-radius: 20px;
+  &.btn-lg{
+    border-radius: 30px;
+  }
+}
+
+.btn-success,.bg-success,.alert-success, .badge-success{
+  background-color: $GREEN_COLOR!important;
+  border-color: $GREEN_COLOR!important;
+}
+
+.btn-outline-success{
+  border-color: $GREEN_COLOR;
+  color: $GREEN_COLOR;
+  &:hover,&:focus,&:active{
+    background-color: $GREEN_COLOR;
+    color: $WHITE_COLOR;
+    border-color: $GREEN_COLOR;
+  }
+}
+.get-in-touch{
+  position: relative;
+  padding: .85rem 1.6rem;
+  font-weight: bold;
+  &:after{
+    position: absolute;
+    content: '';
+    top: 7px;
+    left: 7px;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    border-radius: 30px;
+    border: 1px dashed #fff;
+  }
+}

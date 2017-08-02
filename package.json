@@ -2,6 +2,7 @@
   "name": "sibin-profile",
   "version": "0.0.0",
   "license": "MIT",
+  "main":"index.js", 
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,8 +22,12 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
+    "handlebar": "^1.0.0",
+    "hapi": "^16.5.0",
     "rxjs": "^5.1.0",
+    "vision": "^4.1.1",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

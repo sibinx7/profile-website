@@ -1,0 +1,91 @@
+@import "device";
+@import "mixins";
+@import "variables";
+@import "button";
+
+.border-title{
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+  display: table;
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    min-width: 80px;
+    height: 3px;
+    background: #444;
+  }
+}
+
+.small-table{
+  th{
+    font-size: 16px;
+  }
+  td{
+    font-size: 15px;
+  }
+  td,th{
+    padding: 0.4rem;
+  }
+}
+table.no-border{
+  td,th{
+    border: none;
+  }
+}
+
+article{
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+.text-light{
+  font-weight: 300;
+}
+
+
+@keyframes shrink_expand_disappear {
+  0%{
+    transform: scale(1);
+    background: rgba(172,234,204,1);
+  }
+  33%{
+    transform: scale(1.1);
+    background: rgba(172,234,204,.8);
+  }
+  100%{
+    transform: scale(1.6);
+    background: rgba(172,234,204,0.2);
+  }
+}
+
+
+footer{
+  .middle-footer{
+    background: #1e2933;
+    padding: 40px 0;
+  }
+  .bottom-footer{
+    background: #10171d;
+    padding: 20px 0;
+  }
+  p{
+    margin-bottom: 0;
+    color: #fff;
+  }
+  a{
+    font-weight: bold;
+    color: #2ed87b;
+    text-decoration: none;
+    &:hover{
+      color: darken(#2ed87b,5%);
+    }
+  }
+}
