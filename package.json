@@ -2,14 +2,15 @@
   "name": "sibin-profile",
   "version": "0.0.0",
   "license": "MIT",
-  "main":"index.js", 
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "hapi": "nodemon index.js"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "core-js": "^2.4.1",
     "handlebar": "^1.0.0",
     "hapi": "^16.5.0",
+    "inert": "^4.2.1",
     "rxjs": "^5.1.0",
     "vision": "^4.1.1",
     "zone.js": "^0.8.4"
@@ -46,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "nodemon": "^1.11.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
