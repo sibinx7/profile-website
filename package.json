@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "preinstall": "npm install -g @angular/cli @angular/compiler-cli",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
     "postinstall": "npm run build"
   },
   "private": true,
