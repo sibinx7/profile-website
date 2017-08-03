@@ -12,8 +12,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "preinstall": "npm install -g angular-cli",
-    "postinstall": "npm run build --dev"
+    "preinstall": "npm install -g @angular/cli",
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
