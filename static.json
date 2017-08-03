@@ -1,4 +1,4 @@
 {
-  "root": "/dist",
-  "/assets/*": "/dist/assets"
+  "root": "dist",
+  "/assets/*": "dist/assets"
 }
