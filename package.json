@@ -12,12 +12,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "preinstall": "npm install -g @angular/cli",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli",
     "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^1.2.1",
     "@angular/animations": "^4.3.3",
     "@angular/common": "^4.3.3",
     "@angular/compiler": "^4.3.3",
@@ -39,7 +38,7 @@
     "zone.js": "^0.8.16"
   },
   "devDependencies": {
-    "@angular/cli": "^1.2.1",
+    "@angular/cli": "^1.2.6",
     "@angular/compiler-cli": "^4.3.3",
     "@angular/language-service": "^4.3.3",
     "@types/jasmine": "~2.5.53",
