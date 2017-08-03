@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "postinstall": "ng build --prod"
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
