@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "hapi": "nodemon index.js"
+    "hapi": "nodemon index.js",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
