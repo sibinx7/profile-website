@@ -11,9 +11,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "server": "node index.js",
     "hapi": "nodemon index.js",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build --prod"
   },
   "private": true,
   "dependencies": {
