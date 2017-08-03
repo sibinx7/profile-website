@@ -2,7 +2,9 @@ var Hapi = require('hapi');
 
 var server = new Hapi.Server();
 
-server.connection({port: 4000, host: 'localhost'})
+var port = process.env.PORT || 4000
+
+server.connection({port: port, host: 'localhost'})
 
 server.register([require('inert'), require('vision')], function(){
   server.route({
