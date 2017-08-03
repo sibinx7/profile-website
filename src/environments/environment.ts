@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  BLOG_API_URL:'https://jsonplaceholder.typicode.com/posts/'
+  BLOG_API_URL: 'https://jsonplaceholder.typicode.com/posts/'
 };
