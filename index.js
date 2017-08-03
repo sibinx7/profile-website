@@ -29,7 +29,7 @@ server.register([require('inert'), require('vision')], function(){
     path: '/assets/{param*}',
     handler: {
       directory: {
-        path: 'dist',
+        path: 'dist/assets',
         listing: true
       }
     }
