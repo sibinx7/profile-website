@@ -1,5 +1,6 @@
 {
   "name": "sibin-profile",
+  "description": "My Profile website",
   "version": "0.0.0",
   "license": "MIT",
   "main": "index.js",
@@ -12,7 +13,7 @@
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build --dev"
+    "postinstall": "npm run build --dev"
   },
   "private": true,
   "dependencies": {
@@ -59,7 +60,7 @@
     "typescript": "~2.3.3"
   },
   "engines": {
-    "node": ">=8.2.1",
-    "npm": ">=5.3.0"
+    "node": "8.2.1",
+    "npm": "5.3.0"
   }
 }
