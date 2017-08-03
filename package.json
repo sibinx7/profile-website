@@ -11,8 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build --prod"
+    "preinstall": "concurrently \"npm install -g angular-cli\" \"npm cache clean\"",
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "@angular/platform-browser-dynamic": "^4.3.3",
     "@angular/router": "^4.3.3",
     "bootstrap": "^4.0.0-alpha.6",
+    "concurrently": "^3.5.0",
     "core-js": "^2.4.1",
     "handlebar": "^1.0.0",
     "handlebars": "^4.0.10",
