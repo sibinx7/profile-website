@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "hapi": "nodemon index.js",
-    "preinstall": "concurrently \"npm install -g angular-cli\" \"npm cache clean\"",
+    "preinstall": "npm install -g angular-cli",
     "postinstall": "ng build"
   },
   "private": true,
