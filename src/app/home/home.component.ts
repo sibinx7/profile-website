@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 
+import Typed from 'typed.js';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   public profileInfo: Object    = null;
   public skills: Object[]       = [];
@@ -87,6 +88,18 @@ export class HomeComponent implements OnInit {
         price: 'Starting from $200'
       }
     ];
+  }
+
+  ngAfterViewInit() {
+    const types = new Typed('#typed-skill', {
+      strings: ['Web Designer', 'Frontend Developer', 'Fullstack Developer', 'Youtuber', 'Blogger'],
+      typeSpeed: 80,
+      loop: true,
+      loopCount: 10000,
+      backDelay: 100,
+      backSpeed: 60,
+      showCursor: true
+    });
   }
   public contactSubmit(e) {
     console.log(e);
