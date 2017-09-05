@@ -9,7 +9,6 @@ jobs:
         - master
     steps:
       - checkout
-      - run:  sudo npm install npm@latest -g 
       - run:  sudo npm update -g 
       - run:  sudo npm install --unsafe-perm -g @angular/cli @angular/compiler-cli typescript node-sass
       - run:  npm install
