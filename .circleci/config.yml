@@ -4,8 +4,10 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: circleci/node:8.4.0
+    branches:
+      only:
+        - master 
     steps:
       - checkout
       - run:  sudo npm install -g npm@latest
       - run:  npm install
-           
