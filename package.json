@@ -5,15 +5,14 @@
     "license": "MIT",
     "main": "index.js",
     "scripts": {
-        "ng": "./node_modules/.bin/ng",
-        "start": "./node_modules/.bin/ng serve",
-        "build": "./node_modules/.bin/ng build",
-        "test": "./node_modules/.bin/ng test",
-        "lint": "./node_modules/.bin/ng lint",
-        "e2e": "./node_modules/.bin/ng e2e",
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
         "server": "node index.js",
         "hapi": "nodemon index.js",
-        "preinstall": "npm install  @angular/cli @angular/compiler-cli typescript",
         "heroku-prebuild": "npm install  -g @angular/cli @angular/compiler-cli typescript",
         "postinstall": "npm run build --prod"
     },
@@ -41,8 +40,6 @@
         "zone.js": "^0.8.17"
     },
     "devDependencies": {
-        "@angular/cli": "^1.3.2",
-        "@angular/compiler-cli": "^4.3.6",
         "@angular/language-service": "^4.3.6",
         "@types/jasmine": "^2.5.54",
         "@types/jasminewd2": "^2.0.3",
