@@ -12,4 +12,15 @@ jobs:
       - run:  sudo npm cache clean -f 
       - run:  sudo npm install --unsafe-perm -g @angular/cli @angular/compiler-cli typescript node-sass
       - run:  npm install
- 
+      - run: bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints:
+            - "2f:dd:4e:38:66:40:14:b6:c0:2c:91:7c:de:21:dd:10"
+      - deploy:
+          name: Deploy Master to Heroku
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git push heroku master
+              heroku run ng build 
+              heroku restart
+            fi
