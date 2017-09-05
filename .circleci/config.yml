@@ -12,4 +12,4 @@ jobs:
       - run:  sudo npm cache clean -f 
       - run:  sudo npm install --unsafe-perm -g @angular/cli @angular/compiler-cli typescript node-sass
       - run:  npm install
-      - run:  npm test 
+ 
