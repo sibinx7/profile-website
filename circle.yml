@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 8.4.0 
+deployment:
+  production:
+    branch: master 
+    heroku: 
+      appname: sibin 
+notify:
+  webhools:
+    - url: https://hooks.slack.com/services/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
