@@ -9,7 +9,5 @@ jobs:
         - master
     steps:
       - checkout
-      - run:  sudo rm -rf /usr/local/lib/node_modules
-      - run:  sudo npm install -g npm
       - run:  npm install
       - run:  npm test 
