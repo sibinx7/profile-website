@@ -6,8 +6,11 @@ jobs:
       - image: circleci/node:8.4.0
     branches:
       only:
-        - master 
+        - master
     steps:
       - checkout
       - run:  sudo npm install -g npm@latest
       - run:  npm install
+    notify:
+      webhools:
+        - url: https://hooks.slack.com/services/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
