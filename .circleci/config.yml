@@ -9,5 +9,6 @@ jobs:
         - master
     steps:
       - checkout
-      - run:  npm install
+      - run:  sudo npm install -g @angular/cli @angular/compiler-cli typescript node-sass
+      - run:  sudo npm install
       - run:  npm test 
