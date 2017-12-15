@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  BLOG_API_URL: 'https://jsonplaceholder.typicode.com/posts/'
+  BLOG_API_URL: `http://blog.7chip.com/wp-json/wp/v2/posts?per_page=12`
 };

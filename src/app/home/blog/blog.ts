@@ -1,7 +1,8 @@
 export interface Blog {
-	userId: number;
+	author: number;
 	id: number;
 	title: string;
 	body: string;
-	comments?:Object
+	excerpt: object,
+
 }
