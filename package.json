@@ -14,6 +14,7 @@
         "server": "node index.js",
         "hapi": "nodemon index.js",
         "heroku-prebuild": "npm install  -g @angular/cli @angular/compiler-cli typescript",
+        "preinstall":   "npm install -g http-server @angular/cli @angular/compiler-cli typescript",
         "postinstall": "npm run build --prod"
     },
     "private": true,
