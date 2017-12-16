@@ -9,14 +9,13 @@ import { BlogService 	} from './blog.service';
 })
 export class BlogComponent implements OnInit {
 
-  public posts: Blog[];
+  public posts: Blog[] = [];
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
 		this.blogService.getPosts()
 			.then(result => {
-                console.log(result)
-				this.posts = result
+				this.posts = result;
 			})
 		
   }
