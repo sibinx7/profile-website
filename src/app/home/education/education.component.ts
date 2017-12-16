@@ -19,48 +19,34 @@ export class EducationComponent implements OnInit {
         },
         start: 2008,
         end: 2012,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        note: 'Studied Bachelor of Technology in Electronics and Communication Engineering. Graduated with 70.8% Mark.'
       },
       {
         college: {
-          name: 'Fisat',
-          location: 'Mookkannoor'
+          name: 'ST Thomas Higher Secondary School',
+          location: 'Malayattoor'
         },
-        start: 2008,
-        end: 2012,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        start: 2006,
+        end: 2008,
+        note: 'Studied Higher Secondary Course. Completed with 89% Mark'
       },
       {
         college: {
-          name: 'Fisat',
-          location: 'Mookkannoor'
+          name: 'G.V.H.S Koovappady',
+          location: 'Koovappady'
         },
-        start: 2008,
-        end: 2012,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        start: 2003,
+        end: 2006,
+        note: 'Studied SSLC from there, Completed course with  87.5% Marks'
       },
       {
         college: {
-          name: 'Fisat',
-          location: 'Mookkannoor'
+          name: 'Church UP School, Cheranalloor',
+          location: 'Cheranalloor'
         },
-        start: 2008,
-        end: 2012,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
-      },
-      {
-        college: {
-          name: 'Fisat',
-          location: 'Mookkannoor'
-        },
-        start: 2008,
-        end: 2012,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        start: 1996,
+        end: 2003,
+        note: 'Lower Primary and Upper Primary education'
       }
     ];
   }

@@ -4,10 +4,13 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="text-center"> Hi! Welcome</h2>
-          <h1 class="text-center text-uppercase">
-            <span class="first">Sibin</span>
-            <span class="last">Xavier</span>
+          <h2 class="text-center"> Hello Friends...</h2>
+          <h1 class="text-center main-title">
+            <small>Myself</small>
+            <span class=" text-uppercase main-land-title">
+              <span class="first">Sibin</span>
+              <span class="last">Xavier</span>
+            </span>
           </h1>
           <h3 class="text-center">
             I'm a
@@ -139,7 +142,7 @@
                 <div class="card-deck service-table">
                   <div class="card" *ngFor="let service of services">
                     <div class="card-image-block">
-                      <img src="http://lorempixel.com/600/360/" alt="" class="card-img img-fluid">
+                      <img [src]="service.image" alt="{{service.title}}" class="card-img img-fluid">
                       <div class="card-img-overlay">
                         <h5 class="price">
                           {{ service.price }}
@@ -151,7 +154,7 @@
                         <thead>
                         <tr>
                           <th>
-                            <h4 class="text-uppercase">
+                            <h4 class="text-uppercase title">
                               {{ service.title }}
                             </h4>
                           </th>

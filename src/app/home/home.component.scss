@@ -13,7 +13,7 @@ table td:first-child{
       margin-right:auto;
       padding: 6px 10px;
       border-radius: 4px;
-      background: #2ED87B;
+      background: #7693ca;
       color: #fff;
     }
   }
@@ -21,6 +21,10 @@ table td:first-child{
     padding: 0;
   }
   table{
+    .title{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
     th,td{
       border: none;
       text-align: center;
@@ -45,3 +49,68 @@ table td:first-child{
     }
   }
 }
+
+@-webkit-keyframes  change_linear_bg{
+  0%{
+    background-image: -webkit-linear-gradient(to left, #fffb04, #03ff9e, #36beff);
+    background-image: linear-gradient(to right,#fffb04, #03ff9e, #36beff);
+  }
+  33.33%{
+    background-image: -webkit-linear-gradient(to left,  #03ff9e, #36beff, #fffb04);
+    background-image: linear-gradient(to right, #03ff9e, #36beff, #fffb04);
+  }
+  66.66%{
+    background-image: -webkit-linear-gradient(to left, #36beff, #fffb04, #03ff9e);
+    background-image: linear-gradient(to right,  #36beff, #fffb04, #03ff9e);
+  }
+  100%{
+    background-image: -webkit-linear-gradient(to left, #fffb04, #03ff9e, #36beff);
+    background-image: linear-gradient(to right,#fffb04, #03ff9e, #36beff);
+  }
+}
+
+@keyframes change_linear_bg {
+  0%{
+    background-image: -webkit-linear-gradient(to left, #fffb04, #03ff9e, #36beff);
+    background-image: linear-gradient(to right,#fffb04, #03ff9e, #36beff);
+  }
+  33.33%{
+    background-image: -webkit-linear-gradient(to left,  #03ff9e, #36beff, #fffb04);
+    background-image: linear-gradient(to right, #03ff9e, #36beff, #fffb04);
+  }
+  66.66%{
+    background-image: -webkit-linear-gradient(to left, #36beff, #fffb04, #03ff9e);
+    background-image: linear-gradient(to right,  #36beff, #fffb04, #03ff9e);
+  }
+  100%{
+    background-image: -webkit-linear-gradient(to left, #fffb04, #03ff9e, #36beff);
+    background-image: linear-gradient(to right,#fffb04, #03ff9e, #36beff);
+  }
+}
+
+
+
+
+.main-title{
+  .main-land-title{
+    display: inline-block;
+    -webkit-background-image: linear-gradient(right, #fffb04, #03ff9e, #36beff);
+    background-image: linear-gradient(to right,#fffb04, #03ff9e, #36beff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    -webkit-animation: change_linear_bg 1s infinite;
+    animation: change_linear_bg 1s infinite;
+    -webkit-transition: all 0.3s ease 0.03s;
+    transition: all 0.3s ease 0.03s;
+    span{
+      color: transparent;
+      text-shadow: none;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+

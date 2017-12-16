@@ -16,14 +16,14 @@ export class BlogService {
 
 	}
 
-	getPosts(): Promise<Blog[]>{
+	getPosts(): Promise<Blog[]> {
 		return this.http.get(this.api)
 			.toPromise()
 			.then(response => response.json()  )
 			.catch(error => console.log(error))
 	}
 
-	getPostById(id:number): Promise<Blog>{
+	getPostById( id: number ): Promise<Blog>{
 		const url = `${this.api}/${id}`;
 		return this.http.get(url)
 			.toPromise()

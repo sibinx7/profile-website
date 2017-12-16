@@ -1,3 +1,27 @@
+.blog-wrapper{
+  background: -webkit-radial-gradient(circle, #19b056, #28bb77,#59d98d, #75e4a2, #59d98d,#37c16f, #19b056);
+  background: radial-gradient(circle, #19b056, #28bb77,#59d98d, #75e4a2, #59d98d,#37c16f, #19b056);
+  .section-title{
+    font-weight: bold;
+    color: #fff;
+  }
+  .info{
+    color: #fff;
+  }
+}
+
 .card{
-  margin-bottom: 30px;
+  height: 100%;
+}
+
+.blog-posts{
+  .post{
+    margin-bottom: 30px;
+    a{
+      color: #19b056;
+      &:hover,&:active,&:focus{
+        color: darken(#19b056, 10%)
+      }
+    }
+  }
 }

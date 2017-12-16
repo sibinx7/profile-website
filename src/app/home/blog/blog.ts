@@ -1,7 +1,12 @@
 export interface Blog {
     author: number;
     id: number;
-    title: string;
-    body: string;
+    categories: number[];
+    content: object;
     excerpt: object;
+    title: object;
+    date: string;
+    link: string;
+    type: string;
+    tags: number[];
 }

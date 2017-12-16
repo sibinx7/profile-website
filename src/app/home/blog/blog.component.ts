@@ -15,7 +15,7 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
 		this.blogService.getPosts()
 			.then(result => {
-			
+                console.log(result)
 				this.posts = result
 			})
 		

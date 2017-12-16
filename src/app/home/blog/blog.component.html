@@ -1,41 +1,37 @@
-<div class="blog-wrapper section">
+<div class="blog-wrapper section" *ngIf="posts.length">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4 class="text-center text-uppercase">Our Latest News</h4>
-                <article class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci architecto consequatur deserunt, dolor, facilis iure labore laudantium minima nam nemo nulla quam quibusdam repellendus saepe sapiente totam. Expedita, sit?
+                <h4 class="text-center text-uppercase section-title">Our Latest Blog Posts</h4>
+                <article class="text-center mb-5 info">
+                    Our Latest articles about Frontend Development, Infrastructure, Gadgets
                 </article>
                 <div class="blog-posts row">
-                    <div class="post col-12 col-sm-12 col-md-4" *ngFor="let post of posts">
+                    <div class="post col-12 col-sm-12 col-md-4 post-item" *ngFor="let post of posts">
                         <div class="card">
                             <div class="card-image" *ngIf="post.image">
-                                <img src=" {{post.image}} " alt="{{post.title}} " class="img-fluid ">
+                                <img [src]=" post.image " alt="{{post.title.rendered}} " class="img-fluid ">
                             </div>
-                            <div class="card-block ">
-                                <h5 class="card-title ">
-                                    <a href="{{post.url}} " *ngIf="post.url">
-                    {{post.title}}
+                            <div class="card-block card-body">
+                                <h5 class="card-title mb-4">
+                                    <a href="{{post.link}} " *ngIf="post.link">
+                    {{post.title.rendered}}
 									</a>
-                                    <a [routerLink]="['/posts', post.id]">
-																			{{post.title}}
-																		</a>
                                 </h5>
                                 <h6>
-                                    {{post.published_at}}
+                                    {{post.date}}
                                 </h6>
-                                <section>
-                                    {{post.content || post.body }}
+                                <section [innerHTML]="post.excerpt.rendered">
                                 </section>
                             </div>
                         </div>
                     </div>
                 </div>
                 <p class="text-center more ">
-                    <a href="http://blog.7chip.com " target="_blank " class="btn btn-success btn-round text-capitalize text-bold ">
+                    <a href="http://blog.7chip.com " target="_blank "
+                       class="btn btn-light btn-round text-capitalize text-bold ">
             Visit Our Blog
 					</a>
-                    <a routerLink='/posts'>Internal Blog Posts</a>
                 </p>
             </div>
         </div>

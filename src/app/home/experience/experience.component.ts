@@ -20,8 +20,8 @@ export class ExperienceComponent implements OnInit {
         },
         start: 2017,
         end: 2014,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        note: 'Worked as Frontend developer for 2 Year. Learned Ruby on Rails, Angular JS, ' +
+        'React and Other related Technologies. Good knowledge in Javascript, ES6. Knowledge in Heroku, Git.'
       },
       {
         company: {
@@ -31,8 +31,8 @@ export class ExperienceComponent implements OnInit {
         },
         start: 2014,
         end: 2014,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        note: 'Learned Frontend Development technologies. Basic Django knowledge. Worked for 1 Year. ' +
+        'Worked on Medical field and Trading Websites.'
       },
       {
         company: {
@@ -42,8 +42,8 @@ export class ExperienceComponent implements OnInit {
         },
         start: 2013,
         end: 2014,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        note: '3 Month Training on Drupal and WordPress development. Learned PHP, Created Drupal module for online examination. ' +
+        'Complete many WordPress websites'
       },
       {
         company: {
@@ -53,8 +53,8 @@ export class ExperienceComponent implements OnInit {
         },
         start: 2013,
         end: 2013,
-        note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus condimentum velit vel scelerisque. ' +
-        'Proin efficitur velit at leo sollicitudin, eu interdum dolor lacinia.'
+        note: '1 Month Internship on Core PHP. Learned Social media integration. Worked on Simple Human ' +
+        'Resource management application with custom  PHP Framework'
       }
     ];
   }
