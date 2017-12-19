@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { ServiceComponent } from '../service/service.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
-import { PostsComponent } from '../posts/posts/posts.component'
-import { PostComponent } from '../posts/post/post.component'
+import { PostsComponent } from '../posts/posts/posts.component';
+import { PostComponent } from '../posts/post/post.component';
 import { ProgressBarComponent } from '../progress-bar.component';
 import { ExperienceComponent } from '../home/experience/experience.component';
 

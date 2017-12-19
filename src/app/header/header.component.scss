@@ -1,3 +1,19 @@
-.navbar{
-  background: #fff;
+.c-header-wrapper{
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  .c-header{
+    background: transparent;
+    ul{
+      li.nav-item{
+        a.nav-link{
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .navbar-brand{
+    color: #333;
+  }
 }
