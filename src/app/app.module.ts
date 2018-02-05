@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { MainRouterModule, pageComponents } from './routes/main.routes';
@@ -18,6 +20,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ServiceComponent } from './service/service.component';
 import { PostsComponent } from './posts/posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { HireMeComponent } from './hire-me/hire-me.component';
 
 
 @NgModule({
@@ -33,12 +37,15 @@ import { PostComponent } from './posts/post/post.component';
     PortfolioComponent,
     ServiceComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    ScheduleComponent,
+    HireMeComponent
   ],
   imports: [
     BrowserModule,
     MainRouterModule,
-    HttpModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ BlogService ],
   bootstrap: [AppComponent]

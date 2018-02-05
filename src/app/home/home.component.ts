@@ -1,32 +1,52 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, Input, SimpleChange, DoCheck} from '@angular/core';
+import {NgClass} from '@angular/common';
+import {NgModel, NgForm} from '@angular/forms';
 
 import Typed from 'typed.js';
 
 
 interface Skills {
-    label: string;
-    progress: number;
+  label: string;
+  progress: number;
 }
 
-interface  Services {
+interface Services {
   title: string;
   image: string;
   children: Array<string>;
   price: string;
 }
 
+interface Services {
+  title: string;
+  image: string;
+  children: string[];
+  price: string;
+}
+
+
+interface ContactMessage {
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+}
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
+export class HomeComponent implements OnInit, AfterViewInit, DoCheck {
 
-export class HomeComponent implements OnInit, AfterViewInit {
+  public profileInfo: Object = null;
+  public skills: Array<Skills> = [];
+  public services: Services[] = [];
+  @Input() contact: ContactMessage = {};
 
-  public profileInfo: Object    = null;
-  public skills: Array<Skills>  = [];
-  public services: Object[]     = [];
-  constructor() { }
+
+
+  constructor() {
+  }
 
   ngOnInit() {
 
@@ -42,7 +62,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
         {label: 'Email', value: 'sibinx7@outlook.com, sibinx7@gmail.com'},
         {label: 'Phone', value: '+91-8943648198, +91-8281604078'},
         {label: 'Skype', value: 'sibin.xavier.1'},
-        {label: 'Website', value: 'www.7chip.com', link: true , href: 'http://7chip.com'},
+        {label: 'Website', value: 'www.7chip.com', link: true, href: 'http://7chip.com'},
+        {label: 'Freelancer', value: 'Sibin Xavier', link: true, href: 'https://www.freelancer.com/u/sibinx7'},
         {label: 'Address', value: 'Thottankara (House), Cheranalloo P.O, Koovappady, Ernakulam<br/> PIN : 683544', html: true}
       ]
     };
@@ -115,8 +136,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
       showCursor: true
     });
   }
-  public contactSubmit(e) {
-    console.log(e);
+
+  contactSubmit() {
+    const {name, email, subject, message} = this.contact;
+    if(email !== undefined) {
+      console.log('Proceesd');
+    }
+  }
+
+  /**
+   * @description Detect object changes
+   */
+  ngDoCheck(): void {
+
   }
 
 }

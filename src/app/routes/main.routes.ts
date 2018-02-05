@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
-import { ServiceComponent } from '../service/service.component';
-import { PortfolioComponent } from '../portfolio/portfolio.component';
-import { PostsComponent } from '../posts/posts/posts.component';
-import { PostComponent } from '../posts/post/post.component';
-import { ProgressBarComponent } from '../progress-bar.component';
-import { ExperienceComponent } from '../home/experience/experience.component';
-
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {HomeComponent} from '../home/home.component';
+import {ServiceComponent} from '../service/service.component';
+import {PortfolioComponent} from '../portfolio/portfolio.component';
+import {PostsComponent} from '../posts/posts/posts.component';
+import {PostComponent} from '../posts/post/post.component';
+import {ProgressBarComponent} from '../progress-bar.component';
+import {ExperienceComponent} from '../home/experience/experience.component';
+import {ScheduleComponent} from '../schedule/schedule.component';
+import {HireMeComponent} from '../hire-me/hire-me.component';
 
 export const mainRoutes: Routes = [
   {
@@ -25,6 +26,14 @@ export const mainRoutes: Routes = [
   {
     path: 'services',
     component: ServiceComponent
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+  },
+  {
+    path: 'hire-me',
+    component: HireMeComponent
   },
   {
     path: 'posts',
@@ -49,6 +58,7 @@ export const mainRoutes: Routes = [
   exports: [RouterModule]
 })
 
-export class MainRouterModule {}
+export class MainRouterModule {
+}
 
-export const pageComponents = [ HomeComponent, ExperienceComponent, ProgressBarComponent ];
+export const pageComponents = [HomeComponent, ExperienceComponent, ProgressBarComponent];

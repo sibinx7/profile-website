@@ -44,20 +44,21 @@
                   <section class="content" innerHTML="{{profileInfo.bio}}"></section>
                   <table class="table small-table no-border">
                     <tbody>
-                      <tr *ngFor="let item of profileInfo.data">
-                        <td [style]>
-                          <b>{{item.label}}</b>
-                        </td>
-                        <td>
-                          <span *ngIf="!item.link && !item.html">{{item.value}}</span>
-                          <a href="{{item.href}}" *ngIf="item.link" target="_blank">{{item.value}}</a>
-                          <div *ngIf="item.html" innerHTML="{{item.value }}"></div>
-                        </td>
-                      </tr>
+                    <tr *ngFor="let item of profileInfo.data">
+                      <td [style]>
+                        <b>{{item.label}}</b>
+                      </td>
+                      <td>
+                        <span *ngIf="!item.link && !item.html">{{item.value}}</span>
+                        <a href="{{item.href}}" *ngIf="item.link" target="_blank">{{item.value}}</a>
+                        <div *ngIf="item.html" innerHTML="{{item.value }}"></div>
+                      </td>
+                    </tr>
                     </tbody>
                   </table>
                   <div class="download-more">
-                    <a href="/assets/pdfs/sibin-resume-acr-2017.pdf" class="btn btn-success btn-round" target="_blank">Download CV</a>
+                    <a href="/assets/pdfs/sibin-resume-acr-2017.pdf" class="btn btn-success btn-round" target="_blank">Download
+                      CV</a>
                     <a routerLink="recent-work" class="btn btn-outline-success btn-round">Check My Works</a>
                   </div>
                 </div>
@@ -76,7 +77,8 @@
         <div class="col-12 col-sm-12 col-md-10 offset-1">
           <h4 class="text-center text-uppercase">My Skills</h4>
           <article class="text-center">
-            I learned differnt skills from varioud company, also i am very keen to learn new Technologies. Usually i download
+            I learned differnt skills from varioud company, also i am very keen to learn new Technologies. Usually i
+            download
             Tutorials from torrent or subscribe Lynda.com and learn new stuff. I also use YouTube and watch Tutorials.
             Now a days i check Tutorials websites, API and source code to learn new thing and explore. Below are
             some of my Skills... I can also learn new things if client require...
@@ -97,7 +99,8 @@
         <div class="col-12">
           <h4 class="text-uppercase text-center">Let's work together</h4>
           <article class="text-center">
-            I am very flexible, available almost 12-16 Hr per day. I can work at morning or night depend upon clients requirements.
+            I am very flexible, available almost 12-16 Hr per day. I can work at morning or night depend upon clients
+            requirements.
             My charges are also different and it vary from 5$ to 20$ per hour.
           </article>
           <p class="text-center">
@@ -114,7 +117,20 @@
       <div class="row">
         <div class="col-12">
           <h4 class="text-center text-uppercase">My Portfolio</h4>
-          <article class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet atque consectetur consequuntur, culpa cumque debitis distinctio facere fugiat inventore iste maxime minima nihil omnis porro qui sint temporibus vero.</article>
+          <article class="text-center">
+            <p class="mb-5">
+              I have completed more than 50+ Projects on Freelancer and many other via direct contact. I can show you my
+              PSD to HTML and
+              WordPress Template projects. In addition to this I have worked on many other applications, testings and
+              infrastructure
+              like docker and Heroku
+            </p>
+            <p class="text-center">
+              <a href="" class="btn btn-success">
+                More Projects
+              </a>
+            </p>
+          </article>
         </div>
       </div>
     </div>
@@ -133,7 +149,8 @@
         <div class="col-12">
           <h4 class="text-center text-uppercase">Services</h4>
           <article class="text-center">
-            I offer different services, PSD to HTML/ WordPress conversion. Full Frontend Development, Full Stack development
+            I offer different services, PSD to HTML/ WordPress conversion. Full Frontend Development, Full Stack
+            development
             with Laravel, Ruby On Rails, MEAN and WordPress.
           </article>
           <div class="service-box">
@@ -189,7 +206,8 @@
         <div class="col-12">
           <h4 class="text-uppercase text-center">Get in touch</h4>
           <article class="text-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consectetur corporis culpa deserunt expedita hic id labore, magni nisi quae quam quas, quod repellat sed sequi sint vel velit.
+            If you are looking a for a Frontend Developer, Ruby on Rails Developer, WordPress and Laravel Developer,
+            I can help you. Please send me a message and i will reply as soon as possible.
           </article>
           <div class="row">
             <div class="col-12 col-sm-12 col-md-6">
@@ -197,30 +215,69 @@
                 <div class="card-block card-body">
                   <h5 class="text-bold">Contact me!!!</h5>
                   <p class="">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis dolor dolorem eius eos est explicabo illo magnam magni natus neque non, quos recusandae, rerum similique ut veritatis vero voluptas?
+                    Send message with below form, I will send reply to your email address. Please check on spam folder
+                    also.
                   </p>
-                  <form (ngSubmit)="contactSubmit()">
+                  <form (ngSubmit)="contactSubmit()" name="contact_form" #contactForm="ngForm">
                     <div class="row">
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="contact-name" placeholder="Name" name="name">
+                          <input type="text" class="form-control" id="contact-name" placeholder="Name"
+                                 [(ngModel)]="contact.name" #contactName="ngModel" required="required"
+                                 [ngClass]="{'is-invalid': (contactName.invalid && contactName.dirty)}"
+                                 name="name">
+                          <div
+                            [ngClass]="{ 'valid-feedback':contactName.valid, 'invalid-feedback':(contactName.invalid && contactName.dirty) }"
+                            *ngIf="contactName.invalid"
+                          >
+                            <span *ngIf="(contactName.invalid && contactName.dirty)">Please enter your Name</span>
+                          </div>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="contact-email" placeholder="Email" name="email">
+                          <input type="email" class="form-control" id="contact-email" placeholder="Email"
+                                 [(ngModel)]="contact.email" #contactEmail="ngModel" required="required"
+                                 name="email"
+                                 [ngClass]="{'is-invalid': (contactEmail.invalid && contactEmail.dirty)}"
+                          >
+                          <div
+                            [ngClass]="{ 'valid-feedback':contactEmail.valid, 'invalid-feedback':(contactEmail.invalid && contactEmail.dirty) }"
+                            *ngIf="contactEmail.invalid"
+                          >
+                            <span *ngIf="(contactEmail.invalid && contactEmail.dirty)">Please enter your Name</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" name="subject" id="contact-subject" placeholder="Subject" class="form-control">
+                      <input type="text" name="subject" id="contact-subject" placeholder="Subject"
+                             [(ngModel)]="contact.subject" #contactSubject="ngModel" required="required"
+                             class="form-control"
+                             [ngClass]="{'is-invalid': (contactSubject.invalid && contactSubject.dirty)}"
+                      >
+                      <div
+                        [ngClass]="{ 'valid-feedback':contactSubject.valid, 'invalid-feedback':(contactSubject.invalid && contactSubject.dirty) }"
+                        *ngIf="contactSubject.invalid"
+                      >
+                        <span *ngIf="(contactSubject.invalid && contactSubject.dirty)">Please enter your Name</span>
+                      </div>
                     </div>
                     <div class="form-group">
                       <textarea name="message" id="contact-message" class="form-control"
-                                cols="30" rows="4" placeholder="Message"></textarea>
+                                cols="30" rows="4" placeholder="Message" required="required"
+                                [(ngModel)]="contact.message" #contactMessage="ngModel"
+                                [ngClass]="{'is-invalid': (contactMessage.invalid && contactMessage.dirty)}"
+                      ></textarea>
+                      <div
+                        [ngClass]="{ 'valid-feedback':contactMessage.valid, 'invalid-feedback':(contactMessage.invalid && contactMessage.dirty) }"
+                        *ngIf="contactMessage.invalid"
+                      >
+                        <span *ngIf="(contactMessage.invalid && contactMessage.dirty)">Please enter your Name</span>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <button class="btn btn-block btn-success">Send</button>
+                      <button class="btn btn-block btn-success" [disabled]="!contactForm.valid">Send</button>
                     </div>
                   </form>
                 </div>
@@ -231,7 +288,8 @@
                 <div class="card-block card-body">
                   <h5 class="text-bold">Contact me!!!</h5>
                   <p class="">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis dolor dolorem eius eos est explicabo illo magnam magni natus neque non, quos recusandae, rerum similique ut veritatis vero voluptas?
+                    Directly contact with given address and phone number. I will available almost every time.
+
                   </p>
                   <div class="media mb-4">
                     <div class="d-flex mr-3">

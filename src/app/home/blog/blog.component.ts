@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {Blog} from './blog';
 import {BlogService} from './blog.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
     selector: 'app-blog',
@@ -17,10 +18,7 @@ export class BlogComponent implements OnInit {
 
     ngOnInit() {
         this.blogService.getPosts()
-            .then(result => {
-                this.posts = result;
-            });
-
+          .subscribe(posts => this.posts = posts );
     }
 
 }
