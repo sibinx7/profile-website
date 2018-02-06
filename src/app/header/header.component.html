@@ -1,9 +1,13 @@
-<header [ngClass]="{'c-header-wrapper': (currentUrl === 'home') }">
+<header [ngClass]="headerClass">
+  <div class="container">
   <nav class="navbar navbar-expand-lg c-header">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" routerLink="/">Developer</a>
+    <a class="navbar-brand name-brand" routerLink="/">
+      <img src="/assets/images/profile-img.png" alt="">
+      Sibin Xavier
+    </a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav ml-auto mr-0 mt-2 mt-lg-0">
         <li class="nav-item active">
@@ -26,6 +30,7 @@
       </ul>
     </div>
   </nav>
+  </div>
 </header>
 
 

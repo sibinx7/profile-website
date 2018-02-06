@@ -1,3 +1,6 @@
+@import "../../scss/common/fonts";
+@import "../../scss/common/variables";
+
 .c-header-wrapper{
   width: 100%;
   position: absolute;
@@ -7,13 +10,54 @@
     ul{
       li.nav-item{
         a.nav-link{
+          font-size: 14px;
           color: #fff;
-          font-weight: bold;
+          @extend .font-jura;
+          text-transform: uppercase;
         }
       }
     }
   }
   .navbar-brand{
-    color: #333;
+    color: $WHITE_COLOR;
   }
+}
+
+@keyframes header_from_top {
+  0%{
+    top: -50px;
+    opacity: 0.4;
+    background: rgba(255,255,255,0.6);
+  }
+  100%{
+    top: 0;
+    opacity: 1;
+    background: #fff;
+  }
+}
+
+header{
+  &.away-header{
+    animation: header_from_top 4s ease 0;
+  }
+}
+
+.away-header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  .name-brand{
+    color: #222;
+    img{
+      border-color: #222;
+    }
+    border-color: #222;
+  }
+}
+.navbar{
+  padding-top: 1em;
 }

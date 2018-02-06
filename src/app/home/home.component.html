@@ -4,21 +4,21 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="text-center"> Hello Friends...</h2>
-          <h1 class="text-center main-title">
-            <small>Myself</small>
-            <span class=" text-uppercase main-land-title">
-              <span class="first">Sibin</span>
-              <span class="last">Xavier</span>
-            </span>
-          </h1>
-          <h3 class="text-center">
-            I'm a
+          <h2 class="text-uppercase text-center main-title">
+            I AM
+            <span class="name">Sibin Xavier</span>
+          </h2>
+          <h1 class="text-center skill-title text-uppercase">
+            Professional
             <span id="typed-skill"></span>
-          </h3>
+          </h1>
           <section class="text-center">
+            <a href="/assets/pdfs/sibin-resume-acr-2017.pdf" target="_blank"
+               class="text-uppercase btn btn-lg btn-dark rounded-0 get-in-touch">
+              Download Resume
+            </a>
             <a href="#get-in-touch"
-               class="btn btn-lg btn-success btn-round
+               class="btn btn-lg btn-success rounded-0
                text-uppercase get-in-touch">
               Hire me for Work
             </a>
@@ -33,39 +33,40 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 offset-0 offset-sm-0 offset-md-0 ">
-          <div class="card" id="profile-info-card">
-            <div class="card-block card-body">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                  <img src="/assets/images/profile-img.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                  <h3 class="text-uppercase border-title green">About Me</h3>
-                  <section class="content" innerHTML="{{profileInfo.bio}}"></section>
-                  <table class="table small-table no-border">
-                    <tbody>
-                    <tr *ngFor="let item of profileInfo.data">
-                      <td [style]>
-                        <b>{{item.label}}</b>
-                      </td>
-                      <td>
-                        <span *ngIf="!item.link && !item.html">{{item.value}}</span>
-                        <a href="{{item.href}}" *ngIf="item.link" target="_blank">{{item.value}}</a>
-                        <div *ngIf="item.html" innerHTML="{{item.value }}"></div>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                  <div class="download-more">
-                    <a href="/assets/pdfs/sibin-resume-acr-2017.pdf" class="btn btn-success btn-round" target="_blank">Download
-                      CV</a>
-                    <a routerLink="recent-work" class="btn btn-outline-success btn-round">Check My Works</a>
-                  </div>
-                </div>
+          <div class="section-title-2 mb-3">
+            <h5 class="section-title-bg text-center mb-2">know about me</h5>
+            <h2 class="section-title text-center mb-5">About me</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+              <img src="/assets/images/profile-img.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+              <section class="content" innerHTML="{{profileInfo.bio}}"></section>
+              <table class="table small-table no-border">
+                <tbody>
+                <tr *ngFor="let item of profileInfo.data">
+                  <td [style]>
+                    <b>{{item.label}}</b>
+                  </td>
+                  <td>
+                    <span *ngIf="!item.link && !item.html">{{item.value}}</span>
+                    <a href="{{item.href}}" *ngIf="item.link" target="_blank">{{item.value}}</a>
+                    <div *ngIf="item.html" innerHTML="{{item.value }}"></div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="download-more">
+                <a href="/assets/pdfs/sibin-resume-acr-2017.pdf" class="btn btn-success" target="_blank">Download
+                  CV</a>
+                <a routerLink="recent-work" class="btn btn-outline-success">Check My Works</a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -75,7 +76,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-10 offset-1">
-          <h4 class="text-center text-uppercase">My Skills</h4>
+          <div class="section-title-2 mb-3">
+            <h5 class="section-title-bg text-center mb-2">know my skills</h5>
+            <h2 class="section-title text-center mb-5">Skills</h2>
+          </div>
           <article class="text-center">
             I learned differnt skills from varioud company, also i am very keen to learn new Technologies. Usually i
             download
@@ -104,7 +108,7 @@
             My charges are also different and it vary from 5$ to 20$ per hour.
           </article>
           <p class="text-center">
-            <a href="" class="btn btn-success btn-round">Get Quotes</a>
+            <a href="" class="btn btn-success ">Get Quotes</a>
           </p>
         </div>
       </div>
@@ -116,7 +120,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h4 class="text-center text-uppercase">My Portfolio</h4>
+          <div class="section-title-2 mb-3">
+            <h5 class="section-title-bg text-center mb-2">know what i done</h5>
+            <h2 class="section-title text-center mb-5">Portfolios</h2>
+          </div>
           <article class="text-center">
             <p class="mb-5">
               I have completed more than 50+ Projects on Freelancer and many other via direct contact. I can show you my
@@ -147,7 +154,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h4 class="text-center text-uppercase">Services</h4>
+          <div class="section-title-2 mb-3">
+            <h5 class="section-title-bg text-center mb-2">know what i can do</h5>
+            <h2 class="section-title text-center mb-5">Services</h2>
+          </div>
           <article class="text-center">
             I offer different services, PSD to HTML/ WordPress conversion. Full Frontend Development, Full Stack
             development

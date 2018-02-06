@@ -10,12 +10,44 @@
     color: #888;
   }
 }
+
+.page-content{
+  position: relative;
+  width: 100%;
+}
+
+.name-brand{
+  padding: 10px 8px;
+  img{
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid $WHITE_COLOR;
+  }
+  font-size: 18px;
+  font-weight: 500;
+  vertical-align: middle;
+  color: $WHITE_COLOR;
+  border: 2px solid $WHITE_COLOR;
+  text-transform: uppercase;
+}
 .landing-section{
   background-color: #eee;
-  background-image: url("/assets/images/sibin-7chip-bg.jpg");
+  background-image: url("/assets/images/background-img-3.jpeg");
   background-repeat: no-repeat;
-  padding: 140px 0 240px;
+  padding: 140px 0 140px;
   position: relative;
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  background-size: cover;
+  align-items: center;
+  align-content: center;
+  >.container{
+    flex: 0 0 100%;
+  }
   &:after{
     content: '';
     pointer-events: none;
@@ -31,13 +63,19 @@
   }
   h1,h2,h3{
     color: #fff;
-    text-shadow: 1px 1px 1px #333;
+
   }
   h2{
     margin-bottom: 30px;
+    font-weight: 600;
   }
   h1{
     margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .name{
+    color: $PRIMARY_COLOR;
+    font-weight: 800;
   }
   h3{
     margin-bottom: 40px;
@@ -88,7 +126,6 @@
       font-weight:bold;
       padding: 0.8rem 2rem;
       text-transform: uppercase;
-      border-radius: 28px;
     }
   }
   &:after{
@@ -145,3 +182,53 @@
 }
 
 
+$header_height:80px;
+$footer_height:200px;
+
+.app-content{
+  min-height: calc(100vh - #{$header_height+$footer_height});
+  background: #eee;
+}
+
+.work-experience,
+.home-service,
+.get-in-touch-section,
+.profile-information,
+.bg-white{
+  background: $WHITE_COLOR;
+}
+
+.skill-section{
+  background: #2d2d2d;
+  .section-title{
+    color: $WHITE_COLOR;
+  }
+  p,a,label,article{
+    color: inherit;
+  }
+  section{
+    p,article{
+      color: $WHITE_COLOR;
+    }
+  }
+  color: $WHITE_COLOR;
+}
+
+.section-title-bg{
+  background: $PRIMARY_COLOR;
+  color: $WHITE_COLOR;
+  text-transform: uppercase;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-bottom: 30px;
+}
+
+.section-title{
+  @extend .font-muli;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+}

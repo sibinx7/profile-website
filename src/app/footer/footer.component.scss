@@ -1,0 +1,44 @@
+@import "../../scss/common/variables";
+@import "../../scss/common/mixins";
+.footer{
+  &__social{
+    padding: 0;
+    text-align: center;
+    li{
+      display: inline-block;
+      + li{
+        margin-left: 10px;
+      }
+      a{
+        display: block;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #999;
+        text-align: center;
+        line-height: 36px;
+        border-radius: 4px;
+        &:hover,
+        &:active{
+          @include c-transition(all, 0.3s, ease, 0.03s);
+          background: $PRIMARY_COLOR;
+          color: $WHITE_COLOR;
+          border-color: $PRIMARY_COLOR;
+
+          svg{
+            color: $WHITE_COLOR;
+          }
+        }
+        svg{
+          height: 16px;
+        }
+      }
+    }
+  }
+  &__bottom{
+    font-size: 11px;
+    color: #ddd;
+    p{
+      font-size: inherit;
+    }
+  }
+}

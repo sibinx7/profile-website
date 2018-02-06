@@ -1,5 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+interface Skills {
+  label: string;
+  progress: number;
+}
 
 @Component({
   selector: 'app-progress-bar',
@@ -11,12 +15,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
 
-  @Input() skill: Object;
+  @Input() skill: Skills;
 
   constructor() {
 
   }
   ngOnInit() {
-    
+    // after init
   }
 }

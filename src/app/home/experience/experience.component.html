@@ -2,7 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h4 class="text-center text-uppercase">Work Experience</h4>
+        <div class="section-title-2 mb-3">
+          <h5 class="section-title-bg text-center mb-2">know my experience</h5>
+          <h2 class="section-title text-center mb-5">Experience</h2>
+        </div>
         <article class="text-center mb-5">
           I have total 4+ Year Experience in Web Development. First Year, I worked as PHP, WordPress, Drupal developer.
           After , I worked as Frontend Developer. I have Total 3+ Year Experience in Frontend Development. 2016, February, I resigned
@@ -15,7 +18,7 @@
                 <app-image [src]="experience.company.image" [title]="experience.company.name"
                            [alt]="experience.company.name" [dimension]="'100,100'" class="mr-3 d-flex"></app-image>
                 <div class="media-body">
-                  <label class="badge badge-success">{{experience | yearSpan}}</label>
+                  <label class="badge badge-success rounded-0">{{experience | yearSpan}}</label>
                   <h5 class="mt-0"><a href="{{experience.company.url}}" target="_blank">{{experience.company.name}}</a></h5>
                   <p>
                     {{ experience.note }}

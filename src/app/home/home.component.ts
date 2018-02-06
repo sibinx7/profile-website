@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, Input, SimpleChange, DoCheck} from '@angular/core';
+import {AfterViewInit, Component, OnInit, Input, SimpleChange, DoCheck, OnDestroy} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {NgModel, NgForm} from '@angular/forms';
 
@@ -32,15 +32,29 @@ interface ContactMessage {
   message?: string;
 }
 
+
+interface PortfolioItem {
+  label?: string;
+  link?: boolean;
+  value?: string;
+  html?: boolean;
+  href?: string;
+}
+interface ProfileInfo {
+  bio?: string;
+  data?: PortfolioItem[];
+}
+
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, AfterViewInit, DoCheck {
+export class HomeComponent implements OnInit, AfterViewInit, DoCheck, OnDestroy {
 
-  public profileInfo: Object = null;
+  public profileInfo: ProfileInfo = null;
   public skills: Array<Skills> = [];
   public services: Services[] = [];
+  public typedText: any = null;
   @Input() contact: ContactMessage = {};
 
 
@@ -126,20 +140,25 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck {
   }
 
   ngAfterViewInit() {
-    const types = new Typed('#typed-skill', {
-      strings: ['Web Designer', 'Frontend Developer', 'Fullstack Developer', 'Youtuber', 'Blogger', 'WordPress Developer'],
-      typeSpeed: 80,
-      loop: true,
-      loopCount: 10000,
-      backDelay: 100,
-      backSpeed: 60,
-      showCursor: true
-    });
+    try {
+      this.typedText = new Typed('#typed-skill', {
+        strings: ['Web Designer', 'Frontend Developer', 'FullStack Developer',
+          'YouTuber', 'Blogger', 'WordPress Developer', 'Laravel Developer'],
+        typeSpeed: 80,
+        loop: true,
+        loopCount: 10000,
+        backDelay: 100,
+        backSpeed: 60,
+        showCursor: true
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   contactSubmit() {
     const {name, email, subject, message} = this.contact;
-    if(email !== undefined) {
+    if (email !== undefined) {
       console.log('Proceesd');
     }
   }
@@ -149,6 +168,12 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck {
    */
   ngDoCheck(): void {
 
+  }
+
+  ngOnDestroy() {
+    try {
+      this.typedText.destroy();
+    } catch (e) {}
   }
 
 }

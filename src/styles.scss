@@ -1,15 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400');
 @import "../node_modules/bootstrap/scss/bootstrap";
 body{
   font-size: 16px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: #444;
   line-height: 24px;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
+  *{
+    box-sizing: border-box;
+  }
+}
+
+.btn{
+  font-family: 'Jura', sans-serif;
+  text-transform: uppercase;
 }
 a{
   color: #000;
