@@ -17,6 +17,16 @@ export class ExperienceComponent implements OnInit {
 			{
 				company: {
 					image: '',
+					name: 'Impress AI',
+					url: 'http://www.impress.ai/'
+				},
+				start: 2018,
+				end: '',
+				note: 'Senior React JS developer'
+			},
+			{
+				company: {
+					image: '',
 					name: 'Tecort Innovation',
 					url: 'http://www.tecort.com/'
 				},
