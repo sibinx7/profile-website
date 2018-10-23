@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {Blog} from './blog';
 import {BlogService} from './blog.service';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-blog',

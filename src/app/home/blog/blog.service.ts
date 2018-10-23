@@ -3,12 +3,11 @@ import {HttpHeaders, HttpClient} from '@angular/common/http';
 
 import {Blog} from './blog';
 
-import 'rxjs/add/operator/toPromise';
+
 
 import {environment} from '../../../environments/environment';
-import {Observable} from 'rxjs/Observable';
+import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
-import {of} from 'rxjs/observable/of';
 
 @Injectable()
 export class BlogService {
