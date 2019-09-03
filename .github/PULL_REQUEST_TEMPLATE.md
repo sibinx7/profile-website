@@ -8,6 +8,7 @@ little information
 - [ ] - Configuration 
 - [ ] - Test
 - [	] - Bootstrap
+-	[	] - Upgrade
 
 ##### Did you test on these browsers
 - [	] - Firefox
