@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit, Input, SimpleChange, DoCheck, OnDestroy} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {NgModel, NgForm} from '@angular/forms';
+import {yearDiffFromNow} from '../helper/helper';
 
 import Typed from 'typed.js';
 
@@ -64,6 +65,9 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck, OnDestroy 
 
   ngOnInit() {
 
+  	const dob = new Date('02/27/1991');
+  	const age = yearDiffFromNow(dob);
+
     this.profileInfo = {
       bio: `<p>Hello, I'm Sibin Xavier, I am a Full-Stack Web Developer, WordPress Developer, Frontend Developer from India. Currently working as a full time Freelancer. On Freelancer website i mainly work on PSD to HTML
       , WordPress Development, Angular JS Frontend Development. I have completed more than 50+ Projects on Freelancer and Worked in Medium, High Enterprise applications.</p>
@@ -71,7 +75,7 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck, OnDestroy 
         <p>If you’re looking for a front-end developer who will also care about , to user experience, and clean, maintaiable, future-proof code—then you’re in the right place. Learn more about my services or hire me now.</p>`,
       data: [
         {label: 'Name', value: 'Sibin Xavier'},
-        {label: 'Age', value: '27 Years (27-02-1991)'},
+        {label: 'Age', value: `${age} Years (27-02-1991)`},
         {label: 'Experience', value: '4+ Years'},
         {label: 'Email', value: 'sibinx7@outlook.com, sibinx7@gmail.com'},
         {label: 'Phone', value: '+91-8943648198, +91-8281604078'},

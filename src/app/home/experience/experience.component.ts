@@ -21,7 +21,7 @@ export class ExperienceComponent implements OnInit {
 					url: 'http://www.impress.ai/'
 				},
 				start: 2018,
-				end: '',
+				end: 2020,
 				note: 'Senior React JS developer'
 			},
 			{
