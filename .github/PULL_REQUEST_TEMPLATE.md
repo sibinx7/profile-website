@@ -8,19 +8,19 @@ little information
 - [ ] - Configuration 
 - [ ] - Test
 - [	] - Bootstrap
--	[	] - Upgrade
+- [	] - Upgrade
 
 ##### Did you test on these browsers
 - [	] - Firefox
 - [	] - Chrome
-- [	]	- Edge
-- [	]	- Safari
+- [	] - Edge
+- [	] - Safari
 
 #### Did you tested on mobile 
 
-- [	] - iOs
-- [	]	- Android	
-- [	]	- Windows 
+- [	] - iOS
+- [	] - Android	
+- [	] - Windows 
 
 #### File changed
 
