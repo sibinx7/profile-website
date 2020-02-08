@@ -65,8 +65,10 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck, OnDestroy 
 
   ngOnInit() {
 
-  	const dob = new Date('02/27/1991');
-  	const age = yearDiffFromNow(dob);
+  	const dob: Date = new Date('02/27/1991');
+  	const age: number = yearDiffFromNow(dob);
+  	const workStared = 2013;
+  	const experience: number = ((new Date()).getFullYear() - workStared);
 
     this.profileInfo = {
       bio: `<p>Hello, I'm Sibin Xavier, I am a Full-Stack Web Developer, WordPress Developer, Frontend Developer from India. Currently working as a full time Freelancer. On Freelancer website i mainly work on PSD to HTML
@@ -76,13 +78,13 @@ export class HomeComponent implements OnInit, AfterViewInit, DoCheck, OnDestroy 
       data: [
         {label: 'Name', value: 'Sibin Xavier'},
         {label: 'Age', value: `${age} Years (27-02-1991)`},
-        {label: 'Experience', value: '4+ Years'},
+        {label: 'Experience', value: `${experience}+ Years`},
         {label: 'Email', value: 'sibinx7@outlook.com, sibinx7@gmail.com'},
         {label: 'Phone', value: '+91-8943648198, +91-8281604078'},
         {label: 'Skype', value: 'sibin.xavier.1'},
         {label: 'Website', value: 'www.7chip.com', link: true, href: 'http://7chip.com'},
         {label: 'Freelancer', value: 'Sibin Xavier', link: true, href: 'https://www.freelancer.com/u/sibinx7'},
-        {label: 'Address', value: 'Thottankara (House), Cheranalloo P.O, Koovappady, Ernakulam<br/> PIN : 683544', html: true}
+        {label: 'Address', value: 'Thottankara (House), Cheranalloor P.O, Koovappady, Ernakulam<br/> PIN : 683544', html: true}
       ]
     };
 
