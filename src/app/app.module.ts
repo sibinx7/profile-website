@@ -22,6 +22,7 @@ import { PostsComponent } from './posts/posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HireMeComponent } from './hire-me/hire-me.component';
+import { StrigifyPipe } from './pipes/strigify.pipe';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { HireMeComponent } from './hire-me/hire-me.component';
     PostsComponent,
     PostComponent,
     ScheduleComponent,
-    HireMeComponent
+    HireMeComponent,
+    StrigifyPipe
   ],
   imports: [
     BrowserModule,
