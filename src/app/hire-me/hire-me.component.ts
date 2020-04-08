@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuildren, FormGroup, Validator } from '@angular/form'
 
 @Component({
   selector: 'app-hire-me',
@@ -15,9 +16,10 @@ export class HireMeComponent implements OnInit {
   public hireMe:object = {
     project:{}
   };
-  constructor() {
-
-   }
+  constructor(
+    private formGroup: FormGroup 
+  ) {
+  }
 
   ngOnInit() {
     const currentYear:number = ((new Date()).getFullYear());

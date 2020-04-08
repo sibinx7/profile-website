@@ -27,7 +27,7 @@
     "@angular/router": "^9.0.0",
     "@ngrx/store": "^9.1.0",
     "bootstrap": "^4.4.1",
-    "concurrently": "^5.1.1",
+    "concurrently": "^5.1.0",
     "fullcalendar": "^3.9.0",
     "handlebar": "^1.0.0",
     "handlebars": "^4.0.12",
