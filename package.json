@@ -10,9 +10,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "server": "node index.js",
-    "hapi": "nodemon index.js"
+    "e2e": "ng e2e"    
   },
   "private": true,
   "dependencies": {
@@ -28,11 +26,7 @@
     "@ngrx/store": "^9.1.0",
     "bootstrap": "^4.4.1",
     "concurrently": "^5.1.0",
-    "fullcalendar": "^3.9.0",
-    "handlebar": "^1.0.0",
-    "handlebars": "^4.0.12",
-    "hapi": "^18.1.0",
-    "inert": "^5.1.0",
+    "fullcalendar": "^3.10.0",        
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "rxjs": "^6.5.5",
@@ -48,7 +42,7 @@
     "@angular/language-service": "^9.1.1",
     "@types/jasmine": "^3.3.13",
     "@types/jasminewd2": "^2.0.5",
-    "@types/node": "^12.0.3",
+    "@types/node": "^13.11.1",
     "codelyzer": "^5.2.1",
     "core-js": "^3.6.4",
     "es-abstract": "^1.14.2",
