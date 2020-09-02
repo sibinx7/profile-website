@@ -52,7 +52,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sibin-profile:build"
+            "browserTarget": "sibin-profile:build",
+            "port": 7200
           },
           "configurations": {
             "production": {
@@ -127,10 +128,13 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": "3a027e2a-d5a4-42fc-8662-54fc383e7c28"
   }
 }

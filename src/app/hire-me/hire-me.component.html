@@ -1,3 +1,115 @@
-<p>
-  hire-me works!
-</p>
+<div class="portfolio-page c-normal-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3>Available for Full-Time and Freelance projects</h3>
+            <p>
+              I have more than {{yearOfExperience}} years of <b>Experience</b> in software development.
+              For last {{ frontEndCarrerExperience }} years, I am working as a frontend developer.
+            </p>
+            <h5>My Current Technology</h5>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Technologies</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stack of technologyStacks; index as i">
+                  <td>{{stack.category}}</td>
+                  <td>
+                    <ul>
+                      <li *ngFor="let technology of stack.technologies">
+                        {{ technology.name }}
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12 col-md-6">
+            <h5>Send message</h5>
+            <!-- Send Message Form, Fancy forms with more feature will add to other areas, currently we need few fields -->
+            <form action="" [formGroup]="hireMeForm" (ngSubmit)="hireMeFormSubmit($event)">
+              <div class="card">
+                <div class="card-body">
+                  {{ hireMeForm.status }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Full Name</label>
+                <input #full_name formControlName="full_name" type="text" name="full_name" placeholder="Enter your Full Name" class="form-control" >                
+                {{ full_name.errors }}
+              </div>
+              <div class="form-group">
+                <label for="">Phone number</label>
+                <input formControlName="phone" type="tel" name="phone" placeholder="Enter your Phone number" class="form-control" >
+              </div>
+              <div class="form-group">
+                <label for="">Email address</label>
+                <input formControlName="email" type="email" name="email" placeholder="Enter your Email address" class="form-control" >
+              </div>
+              <hr>
+              <div class="form-group">
+                <label>Type of Work</label>
+                <select formControlName="work_type" name="work_type" id="" class="form-control"  >
+                  <option value="">Select</option>
+                  <option value="full-time" selected> Full Time</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="2_month">2 Months</option>
+                  <option value="6_months">6 Months</option>
+                </select>
+              </div>
+              <div formGroupName="project">
+                <div class="form-group">
+                  <label for="">Frontend Technologies</label>
+                  <select formControlName="frontend_technologies" name="frontend_technologies" id="" class="form-control" multiple="multiple">
+                    <option value="">Select</option>
+                    <option value="jquery_javascript">Javascript/jQuery</option>
+                    <option value="reactjs">React JS</option>
+                    <option value="angular_2">Angular 2</option>
+                    <option value="vuejs">Vue JS</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="">Backend Technologies</label>
+                  <select formControlName="backend_technologies" name="backend_technologies" id="" multiple="multiple" class="form-control">
+                    <option value="">Select</option>
+                    <option value="laravel">Laravel</option>
+                    <option value="wordpress">WordPress</option>
+                    <option value="ruby_on_rails">Ruby on Rails</option>
+                    <option value="django">Django</option>
+                    <option value="nodejs">Node JS</option>
+                    <option value="expressjs">Express JS</option>
+                    <option value="hapijs">Hapi JS</option>
+                  </select>
+                </div>              
+                <hr>
+                <div class="form-group">
+                  <label for="">Project brief</label>
+                  <textarea formControlName="project_brief" name="project_brief" id="" cols="30" rows="3" class="form-control" placeholder="Project brief"></textarea>
+                </div>
+              </div>              
+              <div class="form-group">
+                <label for="">Other informations</label>
+                <textarea formControlName='other_informations' name="other_information" id="" cols="30" rows="3" class="form-control" placeholder="Other informations"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success">
+                  Send Message
+                </button>
+              </div>
+
+            </form>
+
+            <!-- end Send Message Form -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

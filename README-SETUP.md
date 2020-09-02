@@ -23,3 +23,31 @@ CircleCI integrated with application. All configuration can be found in `.circle
 <h2 id="run">Run</h2>
 
 - Run `ng serve`
+
+package.json
+```
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port=9000",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  }
+  ```
+
+  angular.json
+  ```
+       "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sibin-profile:build",
+            "port": 7200
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sibin-profile:build:production"
+            }
+          }
+        }
+```        
