@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { MainRouterModule, pageComponents } from './routes/main.routes';
+import { AppRoutingModule, pageComponents } from './app-routing.module';
 
 import { BlogService } from './home/blog/blog.service';
 
@@ -34,8 +34,7 @@ import { StrigifyPipe } from './pipes/strigify.pipe';
     YearSpanPipe,
     ImageComponent,
     EducationComponent,
-    BlogComponent,
-    PortfolioComponent,
+    BlogComponent,    
     ServiceComponent,
     PostsComponent,
     PostComponent,
@@ -45,7 +44,7 @@ import { StrigifyPipe } from './pipes/strigify.pipe';
   ],
   imports: [
     BrowserModule,
-    MainRouterModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule

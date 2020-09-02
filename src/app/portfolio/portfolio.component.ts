@@ -9,7 +9,7 @@ export class PortfolioComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

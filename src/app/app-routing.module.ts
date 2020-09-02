@@ -1,27 +1,18 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from '../home/home.component';
-import {ServiceComponent} from '../service/service.component';
-import {PortfolioComponent} from '../portfolio/portfolio.component';
-import {PostsComponent} from '../posts/posts/posts.component';
-import {PostComponent} from '../posts/post/post.component';
-import {ProgressBarComponent} from '../progress-bar.component';
-import {ExperienceComponent} from '../home/experience/experience.component';
-import {ScheduleComponent} from '../schedule/schedule.component';
-import {HireMeComponent} from '../hire-me/hire-me.component';
+import {HomeComponent} from './home/home.component';
+import {ServiceComponent} from './service/service.component';
+import {PostsComponent} from './posts/posts/posts.component';
+import {PostComponent} from './posts/post/post.component';
+import {ProgressBarComponent} from './progress-bar.component';
+import {ExperienceComponent} from './home/experience/experience.component';
+import {ScheduleComponent} from './schedule/schedule.component';
+import {HireMeComponent} from './hire-me/hire-me.component';
 
 export const mainRoutes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },
-  {
-    path: 'portfolio',
-    component: PortfolioComponent
-  },
-  {
-    path: 'portfolio/:id',
-    component: PortfolioComponent
   },
   {
     path: 'services',
@@ -47,7 +38,8 @@ export const mainRoutes: Routes = [
         component: PostComponent
       }
     ]
-  }
+  },
+  { path: 'portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule) }
 ];
 
 
@@ -58,7 +50,7 @@ export const mainRoutes: Routes = [
   exports: [RouterModule]
 })
 
-export class MainRouterModule {
+export class AppRoutingModule {
 }
 
 export const pageComponents = [HomeComponent, ExperienceComponent, ProgressBarComponent];
