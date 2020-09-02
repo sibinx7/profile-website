@@ -34,23 +34,29 @@
           <div class="col-12 col-md-6">
             <h5>Send message</h5>
             <!-- Send Message Form, Fancy forms with more feature will add to other areas, currently we need few fields -->
-            <form action="" #hireMeForm="ngForm" (ngSubmit)="hireMeFormSubmit(hireMeForm)">
+            <form action="" [formGroup]="hireMeForm" (ngSubmit)="hireMeFormSubmit($event)">
+              <div class="card">
+                <div class="card-body">
+                  {{ hireMeForm.status }}
+                </div>
+              </div>
               <div class="form-group">
                 <label for="">Full Name</label>
-                <input type="text" name="full_name" placeholder="Enter your Full Name" class="form-control" [(ngModel)]="hireMe.full_name">
+                <input #full_name formControlName="full_name" type="text" name="full_name" placeholder="Enter your Full Name" class="form-control" >                
+                {{ full_name.errors }}
               </div>
               <div class="form-group">
                 <label for="">Phone number</label>
-                <input type="tel" name="phone" placeholder="Enter your Phone number" class="form-control" [(ngModel)]="hireMe.phone">
+                <input formControlName="phone" type="tel" name="phone" placeholder="Enter your Phone number" class="form-control" >
               </div>
               <div class="form-group">
                 <label for="">Email address</label>
-                <input type="email" name="email" placeholder="Enter your Email address" class="form-control" [(ngModel)]="hireMe.email">
+                <input formControlName="email" type="email" name="email" placeholder="Enter your Email address" class="form-control" >
               </div>
               <hr>
               <div class="form-group">
                 <label>Type of Work</label>
-                <select name="work_type" id="" class="form-control"  [(ngModel)]="hireMe.work_type">
+                <select formControlName="work_type" name="work_type" id="" class="form-control"  >
                   <option value="">Select</option>
                   <option value="full-time" selected> Full Time</option>
                   <option value="freelance">Freelance</option>
@@ -58,10 +64,10 @@
                   <option value="6_months">6 Months</option>
                 </select>
               </div>
-              <div ngModelGroup="project">
+              <div formGroupName="project">
                 <div class="form-group">
                   <label for="">Frontend Technologies</label>
-                  <select name="frontend_technologies" id="" class="form-control" multiple="multiple" [(ngModel)]="hireMe.project.frontend_technologies">
+                  <select formControlName="frontend_technologies" name="frontend_technologies" id="" class="form-control" multiple="multiple">
                     <option value="">Select</option>
                     <option value="jquery_javascript">Javascript/jQuery</option>
                     <option value="reactjs">React JS</option>
@@ -71,7 +77,7 @@
                 </div>
                 <div class="form-group">
                   <label for="">Backend Technologies</label>
-                  <select name="backend_technologies" id="" multiple="multiple" class="form-control" [(ngModel)]="hireMe.project.backend_technologies">
+                  <select formControlName="backend_technologies" name="backend_technologies" id="" multiple="multiple" class="form-control">
                     <option value="">Select</option>
                     <option value="laravel">Laravel</option>
                     <option value="wordpress">WordPress</option>
@@ -85,12 +91,12 @@
                 <hr>
                 <div class="form-group">
                   <label for="">Project brief</label>
-                  <textarea name="project_brief" id="" cols="30" rows="3" class="form-control" placeholder="Project brief" [(ngModel)]="hireMe.project.brief"></textarea>
+                  <textarea formControlName="project_brief" name="project_brief" id="" cols="30" rows="3" class="form-control" placeholder="Project brief"></textarea>
                 </div>
               </div>              
               <div class="form-group">
                 <label for="">Other informations</label>
-                <textarea name="other_information" id="" cols="30" rows="3" class="form-control" placeholder="Other informations" [(ngModel)]="hireMe.other_information"></textarea>
+                <textarea formControlName='other_informations' name="other_information" id="" cols="30" rows="3" class="form-control" placeholder="Other informations"></textarea>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-success">

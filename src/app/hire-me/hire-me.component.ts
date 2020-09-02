@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuildren, FormGroup, Validator } from '@angular/form'
+import { FormArray, FormBuilder, FormGroup, Validator, Validators } from '@angular/forms'
+
+const TechonologyStackJSON = require('../database/technologies.json');
 
 @Component({
   selector: 'app-hire-me',
@@ -16,8 +18,10 @@ export class HireMeComponent implements OnInit {
   public hireMe:object = {
     project:{}
   };
+
+  public hireMeForm;
   constructor(
-    private formGroup: FormGroup 
+    private hireMeBuilder: FormBuilder 
   ) {
   }
 
@@ -25,94 +29,27 @@ export class HireMeComponent implements OnInit {
     const currentYear:number = ((new Date()).getFullYear());
     this.yearOfExperience = (currentYear - this.workStartOn)
     this.frontEndCarrerExperience = (currentYear - this.frontEndCarrerStart);
+    this.technologyStacks = TechonologyStackJSON;
+    this.hireMeForm = this.hireMeBuilder.group({
+      full_name: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', Validators.required],
+      work_type: ['', Validators.required],
+      project: this.hireMeBuilder.group({
+        frontend_technologies: [ '', Validators.required ],
+        backend_technologies: [ '', Validators.required],
+        project_brief: [ '', Validators.required]
+      }),
+      other_informations: [ '', Validators.required ],
 
-    this.technologyStacks = [{
-        category: "Frontend",
-        technologies:[
-          {
-            name: "Vue JS"
-          },
-          {
-            name: "Angular JS 2"
-          },
-          {
-            name: "React JS"
-          },
-          {
-            name: "jQuery"
-          },
-          {
-            name: "Mateor JS"
-          }
-        ]
-    }, 
-    {
-      category: "Backend",
-      technologies:[
-        {
-          name: "Laravel"
-        },
-        {
-          name: "WordPress"
-        },
-        {
-          name: "Node JS"
-        },
-        {
-          name: "Hapi JS"
-        },
-        {
-          name: "Django"
-        },
-        {
-          name: "Ruby on Rails"
-        }
-      ]
-    },
-  {
-    category: "Devop",
-    technologies:[
-      {
-        name: "Docker"
-      },
-      {
-        name: "Circle CI"
-      },
-      {
-        name: "Git"
-      },
-      {
-        name: "Microsoft Azure"
-      },
-      {
-        name: "AWS"
-      },
-      {
-        name: "Heroku"
-      }
-    ]
-  },
-{
-  category: "Database",
-  technologies:[
-    {
-      name: "MonogoDB"
-    },
-    {
-      name: "PostgreSQL"
-    },
-    {
-      name: "MySQL"
-    }
-  ]
-}]
+    })
   }
 
-  hireMeFormSubmit(hireMeForm: any){
-    console.log(hireMeForm.value)
-    console.log("This is from form...")
-    console.log(this.hireMe)
-    console.log("Direct values...")
+  hireMeFormSubmit(event){
+    event.preventDefault();
+    console.log(this.hireMeForm.value)
+    console.log("This is from form...")    
+    return false;
   }
 
 }
